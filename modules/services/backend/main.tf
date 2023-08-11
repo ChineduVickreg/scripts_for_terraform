@@ -11,11 +11,11 @@ provider "aws" {
 
 }
  
-
+terraform {
    backend "s3" {
        bucket = "Remote_State_S3_Bucket_Name_terraform"
        key    = "terraform/production"
        region = "us-east-1"
    }
-
+}
 
