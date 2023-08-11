@@ -14,7 +14,7 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v1
 
-    - name: Terraform Init
+    - name: terraform init
       uses: hashicorp/terraform-github-actions/init@v0.4.0
       with:
         working-directory: /.github/workflows/terraform-apply.yml
@@ -28,13 +28,13 @@ jobs:
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-    - name: Terraform Validate
+    - name: terraform validate
       uses: hashicorp/terraform-github-actions/validate@v0.3.7
 
-    - name: Terraform Plan
+    - name: terraform plan
       uses: hashicorp/terraform-github-actions/validate@v0.3.7
 
-    - name: Terraform Apply
+    - name: terraform apply
       uses: hashicorp/terraform-github-actions/apply@v0.4.0
       with:
         working-directory: /.github/workflows/terraform-apply.yml
