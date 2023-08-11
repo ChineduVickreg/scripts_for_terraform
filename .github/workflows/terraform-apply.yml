@@ -16,6 +16,12 @@ jobs:
 
     - name: Terraform Init
       uses: hashicorp/terraform-github-actions/init@v0.4.0
+      with:
+        working-directory: ./github/workflows/terraform-apply.yml
+    - name: Debug
+      run: |
+            ls -la
+            pwd
       env:
         PRIVATE_GITHUB_TOKEN: ${{ secrets.PRIVATE_GITHUB_TOKEN }}
         TF_ACTION_WORKING_DIR: 'terraform'
