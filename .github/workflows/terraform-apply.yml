@@ -37,7 +37,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Sync S3
-      uses: jakejarvis/s3-sync-action@main
+      uses: jakejarvis/s3-sync-action@v0.5.0
       env:
         SOURCE_DIR: './src'
         AWS_REGION: 'us-east-1'
